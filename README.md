@@ -31,6 +31,9 @@ https://drive.google.com/drive/folders/18-Wef_BaIezZsO3g1YJPK1LnV65wZcxk
 * **RAG Mimarisi:** Cevaplar, PDF dokümanından (User Manual) üretilir.
 * **Akıllı Red (Negative Constraint):** Dokümanda olmayan özellikler (örn. Bluetooth, Pil) sorulduğunda, model uydurmak yerine "Dokümanda bu özellikten bahsedilmemektedir" şeklinde yanıt verir.
 
+
+## Notlar
+* Modelin performansını test etmek için sorulan sorular, test-data dosyasında manuel_test_sablonu adlı excel dosyasında görülebilir.
 ---
 
 ## 📊 Performans ve Test Sonuçları

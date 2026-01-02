@@ -1,0 +1,16 @@
+streamlit
+python-dotenv
+langchain
+langchain-classic
+langchain-community
+langchain-google-genai
+langchain-openai
+langchain-groq
+langchain-chroma
+langchain-experimental
+langchainhub
+sentence-transformers
+pypdf
+rapidocr-onnxruntime
+faiss-cpu
+chromadb

@@ -34,6 +34,7 @@ https://drive.google.com/drive/folders/18-Wef_BaIezZsO3g1YJPK1LnV65wZcxk
 
 ## Notlar
 * Modelin performansını test etmek için sorulan sorular, test-data dosyasında manuel_test_sablonu adlı excel dosyasında görülebilir.
+* Model eğitilirken **TONEX_ONE_User_Manual** pdf dosyası kullanılmıştır ve bu pdf dosyası, gitar pedalının orijinal kullanım kılavuzudur. Chatbota sorular sorulurken pedalla alakalı herhangi bir şey sorulabilir, 36 sayfalık detaylı pdf dosyasından eğitilen chatbot ilgili alakalı her şeyi rahatlıkla cevaplayabilmektedir.
 ---
 
 ## 📊 Performans ve Test Sonuçları

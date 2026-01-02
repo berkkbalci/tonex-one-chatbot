@@ -9,13 +9,16 @@
 
 Bu proje, **IK Multimedia TONEX ONE** gitar pedalı için geliştirilmiş, yapay zeka destekli bir teknik destek asistanıdır. 
 
-Projenin temel amacı, **RAG (Retrieval-Augmented Generation)** mimarisini kullanarak, Büyük Dil Modellerinin (LLM) teknik dokümanlara sadık kalarak cevap vermesini sağlamak ve "halüsinasyon" (yanlış bilgi üretme) problemini ortadan kaldırmaktır.
+Projenin temel amacı, **RAG** mimarisini kullanarak, Büyük Dil Modellerinin (LLM) teknik dokümanlara sadık kalarak cevap vermesini sağlamak ve "halüsinasyon" (yanlış bilgi üretme) problemini ortadan kaldırmaktır.
+
+Video Demosu Linki:
+https://drive.google.com/drive/folders/18-Wef_BaIezZsO3g1YJPK1LnV65wZcxk
 
 ---
 
 ## 🎛️ Cihaz Hakkında: Nedir Bu "TONEX ONE"?
 
-**TONEX ONE**, IK Multimedia tarafından geliştirilen ve **AI Machine Modeling™** teknolojisini kullanan devrim niteliğinde mini bir gitar pedalidir.
+**TONEX ONE**, IK Multimedia tarafından geliştirilen devrim niteliğinde mini bir GİTAR PEDALIdır.
 
 * **Ne Yapar?** Gerçek gitar amfilerinin ve kabinlerinin birebir dijital kopyalarını (Tone Models) içinde saklar ve çalar.
 * **Neden Chatbot Gerekiyor?** Cihazın üzerinde bir ekran yoktur ve sadece 3 küçük düğme bulunur. *Global Ayarlar, Noise Gate, EQ ayarları veya Resetleme* gibi işlemler karmaşık tuş kombinasyonları ve renkli LED kodları ile yapılır.
@@ -23,11 +26,27 @@ Projenin temel amacı, **RAG (Retrieval-Augmented Generation)** mimarisini kulla
 
 ---
 
-### 🌟 Özellikler
+## 🌟 Özellikler
 * **Çoklu Model Desteği:** Kullanıcı, **Google Gemini 2.5 Flash** veya **Meta Llama 3.1 8B** (Groq) modelleri arasında seçim yapabilir.
-* **RAG Mimarisi:** Cevaplar, sadece yüklenen PDF dokümanından (User Manual) üretilir.
+* **RAG Mimarisi:** Cevaplar, PDF dokümanından (User Manual) üretilir.
 * **Akıllı Red (Negative Constraint):** Dokümanda olmayan özellikler (örn. Bluetooth, Pil) sorulduğunda, model uydurmak yerine "Dokümanda bu özellikten bahsedilmemektedir" şeklinde yanıt verir.
-* **Kullanıcı Dostu Arayüz:** Streamlit ile geliştirilmiş modern bir sohbet arayüzü sunar.
+
+---
+
+## 📊 Performans ve Test Sonuçları
+
+Proje, teknik soruları yanıtlama başarısı açısından **16 soruluk** bir test seti ile değerlendirilmiştir. Elde edilen metrikler, RAG sisteminin başarısını kanıtlamaktadır:
+
+| Metrik | Gemini 2.5 Flash | Llama 3.1 8B |
+| :--- | :---: | :---: |
+| **Toplam Soru** | 16 | 16 |
+| **Doğru Cevap (TP)** | 15 | 14 |
+| **Yanlış/Eksik (FN/FP)**| 1 | 2 |
+| **Precision** | **1.00** | 0.93 |
+| **Recall** | **0.94** | 0.88 |
+| **F1 Score** | **0.97** | 0.90 |
+
+*Sonuç: Gemini 2.5 Flash modeli, F1 skoru (0.97) ve doğruluk oranı ile teknik destek görevlerinde daha yüksek performans göstermiştir.*
 
 ---
 
@@ -40,7 +59,20 @@ Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları t
 * Google AI Studio API Anahtarı
 * Groq API Anahtarı (Opsiyonel, Llama modeli için)
 
-### 2. Kurulum Adımları
+### 2. Klasör Yapısı
+Projenin düzgün çalışması için dosyaların şu yapıda olduğundan emin olun:
+
+```text
+PROJE_ANA_DIZINI/
+├── app/
+│   └── chatbotv4.py                # Ana uygulama dosyası
+│---TONEX_ONE_User_Manual_English.pdf  # RAG için kaynak doküman
+├── requirements.txt                # Gerekli kütüphaneler
+├── README.md                       # Proje dokümantasyonu
+└── .env                            # API anahtarları (Gizli dosya)
+```
+
+### 3. Kurulum Adımları
 
 1.  **Projeyi Klonlayın:**
     ```bash
@@ -70,8 +102,9 @@ Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları t
     GROQ_API_KEY=senin_groq_api_keyin
     ```
 
-### 3. Uygulamayı Başlatma
+### 4. Uygulamayı Başlatma
 
-Terminalde şu komutu çalıştırın:
+Terminalde ana dizindeyken şu komutu çalıştırın:
 ```bash
-streamlit run chatbotv4.py
+streamlit run app/chatbotv4.py
+```

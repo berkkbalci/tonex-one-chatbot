@@ -2,7 +2,7 @@
 
 **Ders:** MTH409 - Üretken Yapay Zeka ile Chatbot Geliştirme Temelleri  
 **Öğrenci:** İbrahim Berk BALCI  
-
+**No:** 090230737
 ---
 
 ## 📖 Proje Hakkında

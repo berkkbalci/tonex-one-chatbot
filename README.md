@@ -11,6 +11,18 @@ Bu proje, **IK Multimedia TONEX ONE** gitar pedalı için geliştirilmiş, yapay
 
 Projenin temel amacı, **RAG (Retrieval-Augmented Generation)** mimarisini kullanarak, Büyük Dil Modellerinin (LLM) teknik dokümanlara sadık kalarak cevap vermesini sağlamak ve "halüsinasyon" (yanlış bilgi üretme) problemini ortadan kaldırmaktır.
 
+---
+
+## 🎛️ Cihaz Hakkında: Nedir Bu "TONEX ONE"?
+
+**TONEX ONE**, IK Multimedia tarafından geliştirilen ve **AI Machine Modeling™** teknolojisini kullanan devrim niteliğinde mini bir gitar pedalidir.
+
+* **Ne Yapar?** Gerçek gitar amfilerinin ve kabinlerinin birebir dijital kopyalarını (Tone Models) içinde saklar ve çalar.
+* **Neden Chatbot Gerekiyor?** Cihazın üzerinde bir ekran yoktur ve sadece 3 küçük düğme bulunur. *Global Ayarlar, Noise Gate, EQ ayarları veya Resetleme* gibi işlemler karmaşık tuş kombinasyonları ve renkli LED kodları ile yapılır.
+* **Çözüm:** Bu proje, kullanıcıların "Kırmızı ışık yanıp sönüyor, ne demek?" veya "Reset nasıl atarım?" gibi sorularına saniyeler içinde kullanım kılavuzundan (Manual) doğru cevabı verir.
+
+---
+
 ### 🌟 Özellikler
 * **Çoklu Model Desteği:** Kullanıcı, **Google Gemini 2.5 Flash** veya **Meta Llama 3.1 8B** (Groq) modelleri arasında seçim yapabilir.
 * **RAG Mimarisi:** Cevaplar, sadece yüklenen PDF dokümanından (User Manual) üretilir.

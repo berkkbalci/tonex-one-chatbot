@@ -1,4 +1,4 @@
-# 🎸 TONEX ONE AI Assistant
+# 🎸 TONEX ONE AI Chatbot
 
 **Ders:** MTH409 - Üretken Yapay Zeka ile Chatbot Geliştirme Temelleri  
 **Öğrenci:** İbrahim Berk BALCI  
